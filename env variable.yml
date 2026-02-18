@@ -1,0 +1,21 @@
+name: Add Two Numbers with Env Vars
+
+on:
+  workflow_dispatch:
+
+jobs:
+  add-numbers:
+    runs-on: ubuntu-latest
+    env:
+      NUMBER1: 5
+      NUMBER2: 7
+    steps:
+      - name: Show environment variables
+        run: |
+          echo "Number 1: $NUMBER1"
+          echo "Number 2: $NUMBER2"
+
+      - name: Add numbers
+        run: |
+          sum=$((NUMBER1 + NUMBER2))
+          echo "The sum of $NUMBER1 and $NUMBER2 is: $sum"
