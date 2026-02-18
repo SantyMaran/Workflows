@@ -3,12 +3,12 @@ name: Add Two Numbers
 on:
   workflow_dispatch:
     inputs:
-      number1:
-        description: 'First number'
+      name1:
+        description: 'First name'
         required: true
         default: '0'
-      number2:
-        description: 'Second number'
+      name2:
+        description: 'Second name'
         required: true
         default: '0'
 
